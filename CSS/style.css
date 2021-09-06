@@ -1,0 +1,604 @@
+body {
+  background-color: #1c2436;
+  background-image: url("../Images/pageVisiteur/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#bodyAdmin {
+  overflow-y: scroll;
+  /* background-image: url("../Images/autre/Galaxie.png"); */
+}
+
+section, #navbarAcceuil {
+  -webkit-animation: fadeInAnimation ease 4s;
+          animation: fadeInAnimation ease 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+}
+
+#up {
+  padding-top: 5vh;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/*                                        NAVBAR                                            */
+/* ---------------------------------------------------------------------------------------- */
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+}
+nav .navbar-brand {
+  font-family: aAcornSquash, Tahoma, "Times New Roman", SansSerif;
+  font-size: 290%;
+}
+nav #logo {
+  width: 40vh;
+  height: auto;
+}
+nav a:hover {
+  color: #9b7a3c;
+}
+nav .nav .nav-item {
+  font-family: DoctorWho, "Times New Roman", SansSerif;
+  letter-spacing: 1px;
+  font-size: 250%;
+}
+nav .nav .dropdown-menu {
+  font-size: 100%;
+  border: none;
+  background-color: transparent;
+}
+nav .nav .dropdown-menu .dropdown-item {
+  color: white;
+  background-color: transparent;
+}
+
+ul.sous-menu {
+  list-style-type: none;
+}
+
+a#navbarDropdown {
+  display: flex;
+  align-items: center;
+}
+
+.container-fluid {
+  margin-right: 40px;
+}
+
+.dropdown-toggle::after{
+  display: none;
+}
+
+.dropdown-item, .welcome {
+  font-family: DoctorWho, "Times New Roman", SansSerif;
+  letter-spacing: 1px;
+  height: 50px;
+}
+
+.dropdown-item:hover{
+  color: #9b7a3c !important;
+}
+
+.welcome {
+  margin-left: 20px;
+}
+
+ul.dropdown-menu.show {
+  margin-top: -10px;
+}
+
+.navbar {
+  background-color: transparent;
+  -webkit-transition: 1s background-color;
+  transition: 1s background-color;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/*                                        TEXTE                                             */
+/* ---------------------------------------------------------------------------------------- */
+.text-center {
+  padding-top: 25vh;
+  color: white;
+}
+.text-center .blockquote-footer {
+  color: #fff;
+}
+
+.texteRight {
+  -webkit-animation: sliderRight 2s;
+          animation: sliderRight 2s;
+}
+
+.texteLeft {
+  -webkit-animation: sliderLeft 2s;
+          animation: sliderLeft 2s;
+}
+
+#texteConnect {
+  padding-top: 28vh;
+  -webkit-animation: sliderRight 2s;
+          animation: sliderRight 2s;
+}
+
+.texteHome {
+  margin-top: 1500px;
+  margin-bottom: 15vh;
+  padding-top: 20vh;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/*                                        CARD                                              */
+/* ---------------------------------------------------------------------------------------- */
+.row {
+  padding-top: 15vh;
+  padding: 2vh;
+}
+.row .card {
+  background-color: #1c2436;
+  color: white;
+  height: 100%;
+}
+.row .card .card-title {
+  margin-left: 1vh;
+  font-family: DoctorWho, "Times New Roman", SansSerif;
+  letter-spacing: 1px;
+  font-size: 270%;
+}
+.row .card img {
+  position: top;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+.row .card img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.row .card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* .Home{
+  background-image: url("../Images/autre/Galaxie.png");
+} */
+#rowFirst {
+  margin-top: 10vh;
+}
+
+.rowOne {
+  margin-top: 5vh;
+}
+
+.card-ajout {
+  padding-top: 40vh;
+  padding: 2vh;
+}
+
+.rowLeft {
+  -webkit-animation: sliderLeft 1s;
+          animation: sliderLeft 1s;
+}
+
+.rowRight {
+  -webkit-animation: sliderRight 1s;
+          animation: sliderRight 1s;
+}
+
+#rowConnect {
+  padding-top: 20vh;
+}
+
+@-webkit-keyframes sliderLeft {
+  0% {
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes sliderLeft {
+  0% {
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@-webkit-keyframes sliderRight {
+  0% {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@keyframes sliderRight {
+  0% {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+/* ---------------------------------------------------------------------------------------- */
+/*                                        MODAL                                             */
+/* ---------------------------------------------------------------------------------------- */
+.modal-content {
+  background-color: #1c2436;
+  color: #fff;
+  border-radius: 2%;
+  width: 95vh;
+  height: auto;
+  margin-left: -20vh;
+}
+/* .modal-content p {
+  margin: 2vh;
+} */
+/* .modal-content li {
+  list-style-type: none;
+  padding: 0.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+} */
+
+#tarifBillet .categorie {
+  display: flex;
+  justify-content: space-between;
+}
+
+#modalConnection {
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/*                                      FORMULAIRE                                          */
+/* ---------------------------------------------------------------------------------------- */
+form {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-left: 15vh;
+  width: 60vh;
+}
+
+form div + div {
+  margin-top: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-top: 2vh;
+  width: 60vh;
+}
+
+input {
+  width: 60vh;
+}
+
+textarea {
+  width: 60vh;
+  height: 10vh;
+}
+
+h4 {
+  margin-left: 2vh;
+  font-family: DoctorWho, "Times New Roman", SansSerif;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+}
+
+.form-select {
+  width: 10vh;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/*                                        BOUTON                                            */
+/* ---------------------------------------------------------------------------------------- */
+.btn {
+  margin-top: 20px;
+  margin-left: 25vh;
+  margin-right: 25vh;
+  color: white;
+  border-color: #fff;
+  width: auto;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #9b7a3c;
+}
+
+.btn-resa {
+  margin-left: 40vh;
+  margin-right: 40vh;
+}
+
+.btn-contact {
+  margin-left: 38vh;
+}
+
+.admin {
+  margin-top: 10vh;
+  margin-left: 5vh;
+  margin-right: 0;
+}
+
+.btn-admin {
+  background-color: #1c2436;
+  margin-left: 5vh;
+  margin-right: 0;
+}
+
+.btn-file {
+  margin-left: 10vh;
+  margin-right: 0;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/*                                        TABLEAU                                           */
+/* ---------------------------------------------------------------------------------------- */
+table {
+  border-top-left-radius: 1vh;
+  background-color: #1c2436;
+  color: #fff;
+  width: 100%;
+}
+table thead {
+  color: #9b7a3c;
+  font-family: DoctorWho, "Times New Roman", SansSerif;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+}
+table thead td {
+  padding: 1vh;
+}
+
+.tableau {
+  padding: 5vh;
+}
+.tableau tr {
+  border-bottom: solid 1px #fff;
+}
+.tableau th {
+  text-align: center;
+}
+
+.tfirst {
+  margin-top: 40vh;
+  margin-bottom: 40vh;
+}
+
+.ligne-body {
+  font-style: italic;
+}
+.ligne-body td {
+  padding: 1%;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/*                                        FLECHES                                           */
+/* ---------------------------------------------------------------------------------------- */
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10vh;
+}
+.wrapper .cta {
+  text-decoration: none;
+  font-family: DoctorWho, "Times New Roman", SansSerif;
+  letter-spacing: 1px;
+  font-size: 3rem;
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: skewX(-15deg);
+          transform: skewX(-15deg);
+}
+.wrapper .cta .cta:focus {
+  outline: none;
+}
+.wrapper .cta .cta:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 10px 10px 0;
+          box-shadow: 10px 10px 0;
+}
+
+.previousArrow {
+  -webkit-transform: rotate(0.5turn);
+          transform: rotate(0.5turn);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.downArrow {
+  -webkit-transform: rotate(0.23turn);
+          transform: rotate(0.23turn);
+}
+
+.downIndex {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10vh;
+  padding: 35vh;
+}
+
+#arrowAcceuil {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 80vh;
+}
+
+/************* SVG ***************/
+svg {
+  width: 66px;
+  height: 43px;
+}
+
+path.one {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
+}
+
+path.two {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+  -webkit-animation: color_anim 1s infinite 0.2s;
+          animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-animation: color_anim 1s infinite 0.6s;
+          animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-animation: color_anim 1s infinite 0.4s;
+          animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@-webkit-keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #1c2436;
+  }
+  100% {
+    fill: white;
+  }
+}
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #1c2436;
+  }
+  100% {
+    fill: white;
+  }
+}
+/* ---------------------------------------------------------------------------------------- */
+/*                                        FOOTER                                            */
+/* ---------------------------------------------------------------------------------------- */
+#contenu {
+  height: 100%;
+}
+
+#bas {
+  position: relative;
+  padding: 10px 10px 10px 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #1c2436;
+  color: white;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/*                                  A GARDER DE COTER                                       */
+/* ---------------------------------------------------------------------------------------- */
+/*.animeScrollDown{*/
+/*     animation: 2s jcp;*/
+/*}*/
+/*.animeScrollUp{*/
+/*    animation: 2s jcc;*/
+/*}*/
+/*@keyframes jcc {*/
+/*    from{*/
+/*        background-color: #212529;*/
+/*    }*/
+/*    to{*/
+/*        background-color: transparent;*/
+/*    }*/
+/*}*/
+/*@keyframes jcp {*/
+/*    from{*/
+/*        background-color: transparent;*/
+/*    }*/
+/*    to{*/
+/*        background-color: #212529;*/
+/*    }*/
+/*}*/

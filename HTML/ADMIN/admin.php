@@ -147,9 +147,32 @@
                         <td>Date de naissance</td>
                         <td>Code Postale</td>
                         <td>Ville</td>
+                        <td>Date d'inscription</td>
+                        <td>role</td>
+                        <td>edition</td>
                     </tr>
                 </thead>    
-                <tbody id="users"></tbody>  
+                <tbody id="users">
+                    <?php 
+                    include "../../PHP/BDD/sql.php"; 
+                    include "../../PHP/BDD/functionsBdd.php";
+                        foreach(allUsers($bdd) as $user){
+                            echo "<tr>
+                            <td>".htmlspecialchars($user ->id)."</td>
+                            <td> ". htmlspecialchars($user ->name)."</td>
+                            <td> ". htmlspecialchars($user ->firstname)."</td>
+                            <td> ". htmlspecialchars($user ->email)."</td>
+                            <td> ". htmlspecialchars($user ->phone)."</td>
+                            <td> ". htmlspecialchars($user ->birthday)."</td>
+                            <td> ". htmlspecialchars($user ->postcode)."</td>
+                            <td> ". htmlspecialchars($user ->city)."</td>
+                            <td> ". htmlspecialchars($user ->date_inscription)."</td>
+                            <td> ". htmlspecialchars($user ->role)."</td>
+                            <td><a href=''><i class='fas fa-user-edit'></i></a><a href=''><i class='fas fa-skull-crossbones'></i></a></td>
+                            </tr>";
+                        }           
+                    ?>
+                </tbody>  
             </table>
         </section> 
             

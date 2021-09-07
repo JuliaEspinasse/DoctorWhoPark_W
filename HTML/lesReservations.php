@@ -116,7 +116,9 @@
                         <img class="img-fluid d-block mx-auto" src="../Images/lieux/paramount-02.jpg" alt="" />
                         <p>A LA JOURNEE<ul>
                             <div id="tarifBillet">
-                                <?php include "../PHP/sql.php";
+                                <?php 
+                                include "../PHP/BDD/sql.php"; 
+                                include "../PHP/BDD/functionsBdd.php";
                                    foreach(allTarifs($bdd) as $tarif){
                                        if($tarif -> period_id == 16){
                                            echo "<div class='categorie'><div> " . htmlspecialchars($tarif ->categorie) . " </div><div> " . htmlspecialchars($tarif ->montant) . " </div></div>";

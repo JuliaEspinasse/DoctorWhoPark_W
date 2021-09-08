@@ -143,9 +143,17 @@
                     <div class="modal-body">
                         <img class="img-fluid d-block mx-auto" src="../Images/lieux/TardisIn.jpg" alt="" />
                         <p>A LA NUIT<ul>
-                            <div id="tarifSejour"></div>
+                            <div id="tarifSejour">
+                            <?php 
+                                foreach(allTarifs($bdd) as $tarif){
+                                    if($tarif -> period_id == 17){
+                                        echo "<div class='categorie'><div> " . htmlspecialchars($tarif ->categorie) . " </div><div> " . htmlspecialchars($tarif ->montant) . " </div></div>";
+                                    }
+                                }           
+                            ?>
+                            </div>
                         </ul></p>
-                        <a href="connection.html"> 
+                        <a href="connection.php"> 
                         <button type="submit" class="btn btn-contact">Nous Contacter</button></a>
                     </div>
                 </div>

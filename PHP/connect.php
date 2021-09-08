@@ -1,5 +1,5 @@
 <?php 
-include "BDD/sql.php";
+include "bdd/sql.php";
 
 //  Récupération de l'utilisateur et de son pass hashé
 $email = $_POST['email'];
@@ -14,7 +14,7 @@ $isPasswordCorrect = password_verify($_POST['mdp'], $resultat['mdp']);
 if (!$resultat)
 {
     echo '<script> alert("Mauvais identifiant ou mot de passe !") </script>';
-    echo '<meta http-equiv="refresh" content="0.01; URL=\'../HTML/connection.php\'">';
+    echo '<meta http-equiv="refresh" content="0.01; URL=\'../html/connection.php\'">';
 }
 else
 {
@@ -30,6 +30,6 @@ else
     }
     else {
         echo '<script> alert("Mauvais identifiant ou mot de passe !") </script>';
-        echo '<meta http-equiv="refresh" content="0.01; URL=\'../HTML/connection.php\'">';
+        echo '<meta http-equiv="refresh" content="0.01; URL=\'../html/connection.php\'">';
     }
 }

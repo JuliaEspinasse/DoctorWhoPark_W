@@ -296,7 +296,7 @@ ul.dropdown-menu.show {
           justify-content: space-between;
 } */
 
-#tarifBillet .categorie {
+.categorie {
   display: flex;
   justify-content: space-between;
 }
@@ -407,6 +407,10 @@ table thead td {
   padding: 1vh;
 }
 
+td a:hover {
+  color: #9b7a3c;
+}
+
 .tableau {
   padding: 5vh;
 }
@@ -418,9 +422,12 @@ table thead td {
   text-align: center;
 }
 
+tbody td {
+  padding-left: 20px;
+}
+
 .tfirst {
-  margin-top: 40vh;
-  margin-bottom: 40vh;
+  padding-top: 100px;
 }
 
 .ligne-body {
@@ -431,7 +438,9 @@ table thead td {
 }
 
 i.fas.fa-user-edit, 
-i.fas.fa-skull-crossbones
+i.fas.fa-skull-crossbones,
+i.fas.fa-edit,
+i.fas.fa-trash-alt
 {
   margin-left: 12px;
 }

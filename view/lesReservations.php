@@ -1,3 +1,8 @@
+<?php
+include "../bdd/sql.php"; 
+include "../bdd/functionsBdd.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -25,7 +30,7 @@
     <body>
 
     <!------------ Navbar -------------->
-        <?php include "../php/navbar.php"; ?>
+        <?php include "navbar.php"; ?>
         <section>
     <!------------ TEXTE ------------>
             <figure class="text-center texteRight">
@@ -85,7 +90,7 @@
                     <a data-bs-toggle="modal" href="#modalBillet">
                         <div class="card">
                             <h5 class="card-title">Les Billets</h5>
-                            <img src="../Images/pageReservation/LesBillets.jpg" alt="DWP">
+                            <img src="../images/pageReservation/LesBillets.jpg" alt="DWP">
                         </div>
                     </a>
                 </div>
@@ -93,7 +98,7 @@
                     <a data-bs-toggle="modal" href="#modalSejour">
                         <div class="card">
                             <h5 class="card-title">Les Sejours</h5>
-                            <img src="../Images/pageReservation/LesSejours.jpg" alt="DWP">
+                            <img src="../images/pageReservation/LesSejours.jpg" alt="DWP">
                         </div>
                     </a>
                 </div>
@@ -101,7 +106,7 @@
                     <a data-bs-toggle="modal" href="#modalCostume">
                         <div class="card">
                             <h5 class="card-title">Les Costumes</h5>
-                            <img src="../Images/pageReservation/LesCostumes.jpg" alt="DWP">
+                            <img src="../images/pageReservation/LesCostumes.jpg" alt="DWP">
                         </div>
                     </a>
                 </div>
@@ -117,11 +122,12 @@
                         <p>A LA JOURNEE<ul>
                             <div id="tarifBillet">
                                 <?php 
-                                include "../php/bdd/sql.php"; 
-                                include "../php/bdd/functionsBdd.php";
                                    foreach(allTarifs($bdd) as $tarif){
                                        if($tarif -> period_id == 16){
-                                           echo "<div class='categorie'><div> " . htmlspecialchars($tarif ->categorie) . " </div><div> " . htmlspecialchars($tarif ->montant) . " </div></div>";
+                                            echo "<div class='categorie'>
+                                                <div> " . htmlspecialchars($tarif ->categorie) . " </div>
+                                                <div> " . htmlspecialchars($tarif ->montant) . " </div>
+                                            </div>";
                                        }
                                    }           
                                 ?>
@@ -147,7 +153,10 @@
                             <?php 
                                 foreach(allTarifs($bdd) as $tarif){
                                     if($tarif -> period_id == 17){
-                                        echo "<div class='categorie'><div> " . htmlspecialchars($tarif ->categorie) . " </div><div> " . htmlspecialchars($tarif ->montant) . " </div></div>";
+                                        echo "<div class='categorie'>
+                                            <div> " . htmlspecialchars($tarif ->categorie) . " </div>
+                                            <div> " . htmlspecialchars($tarif ->montant) . " </div>
+                                        </div>";
                                     }
                                 }           
                             ?>
@@ -178,7 +187,7 @@
         </div>
 
         <!-- Modal Message obligation de connection-->
-        <div class="modal fade" id="modalConnection" tabindex="-2" role="dialog" aria-hidden="true">
+        <!-- <div class="modal fade" id="modalConnection" tabindex="-2" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -188,7 +197,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 

@@ -62,6 +62,7 @@ function selectAttraction($attraction, $bdd)
     return $data;
 }
 
+// Supprimer
 function deleteAttraction($attraction,$bdd){
     $sql = "DELETE FROM attraction WHERE name = :name";
     $req =  $bdd->prepare($sql);
@@ -71,15 +72,16 @@ function deleteAttraction($attraction,$bdd){
     return $result;
 }
 
-function deleteUser($email,$bdd){
-    $sql = "DELETE FROM user WHERE email = :email";
+function deleteUser($id,$bdd){
+    $sql = "DELETE FROM user WHERE id = :id";
     $req =  $bdd->prepare($sql);
     $result = $req->execute([
-        "email"=>$email
+        "id"=>$id
     ]);
     return $result;
 }
 
+// Ajouter
 function addAttraction($attractionNom,$attractionDesc,$attractionImg,$bdd){
     $sql = "insert into attraction (attraction_nom,attraction_description,animal_image) VALUES (:nom, :description, :image)";
     $req =  $bdd->prepare($sql);

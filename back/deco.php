@@ -2,7 +2,7 @@
 session_start();
 
 echo '<script> alert("'. $_SESSION['firstname'] .' ' . $_SESSION['name'] . ', vous êtes déconnecté !") </script>';
-echo '<meta http-equiv="refresh" content="0.01; URL=\'../../index.php\'">';
+echo '<meta http-equiv="refresh" content="0.01; URL=\'../index.php\'">';
 
 // Suppression des variables de session et de la session
 $_SESSION = array();

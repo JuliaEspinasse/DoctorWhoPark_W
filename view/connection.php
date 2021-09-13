@@ -27,18 +27,18 @@
         <nav class="navbar fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.php">
-                    <img src="../images/logo/logo/drwp.png" alt="Logo_DWP" id="logo">
+                    <img src="../images/logo/crea/drwp.png" alt="Logo_DWP" id="logo">
                 </a>
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="../index.php">HOME</a>
                     </li>
                     <?php
-                    include "../php/bdd/sql.php";
+                    include "../bdd/sql.php";
                     if(isset($_COOKIE['role'== "admin"])){
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../HTML/ADMIN/admin.php">
+                        <a class="nav-link" aria-current="page" href="admin.php">
                             <i class="fas fa-user-shield"></i>
                         </a>
                     </li>
@@ -118,7 +118,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <fieldset><h4>Connection</h4> 
-                            <form method="post" action="../php/api/connect.php">
+                            <form method="post" action="../back/connect.php">
                                 <div>
                                     <label for="email">Votre email</label>
                                     <input type="text" id="email" name="email" placeholder="email@galifrey.gxy" required>
@@ -142,7 +142,7 @@
                     <div class="modal-body">
                         <div class="corp">
                             <fieldset><h4>Inscription</h4>
-                                <form method="post" action="../php/api/register.php">
+                                <form method="post" action="../back/register.php">
                                     <div>
                                         <label for="name">Nom</label>
                                         <input type="text" id="name" name="name" placeholder="" required>
@@ -197,7 +197,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <fieldset><h4>Contact</h4> 
-                            <form method="post" action="../php/contact.php">
+                            <form method="post" action="">
                                 <div>
                                     <label for="contact_name">Nom :</label>
                                     <input type="text" id="contact_name" name="user_name">

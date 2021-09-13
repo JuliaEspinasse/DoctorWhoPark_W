@@ -14,7 +14,7 @@ $isPasswordCorrect = password_verify($_POST['mdp'], $resultat['mdp']);
 if (!$resultat)
 {
     echo '<script> alert("Mauvais identifiant ou mot de passe !") </script>';
-    echo '<meta http-equiv="refresh" content="0.01; URL=\'../../html/connection.php\'">';
+    echo '<meta http-equiv="refresh" content="0.01; URL=\'../view/connection.php\'">';
 }
 else
 {
@@ -25,11 +25,11 @@ else
         $_SESSION['role'] = $resultat['role'];
         $_SESSION['name'] = $resultat['name'];
         $_SESSION['firstname'] = $resultat['firstname'];
-        echo '<script> alert("'.$_SESSION['firstname'].' '.$_SESSION['name'].' '.', vous êtes connecté !") </script>';
-        echo '<meta http-equiv="refresh" content="0.01; URL=\'../../index.php\'">';
+        echo '<script> alert("Bonjour '.$_SESSION['firstname'].' '.$_SESSION['name'].' '.' !") </script>';
+        echo '<meta http-equiv="refresh" content="0.01; URL=\'../index.php\'">';
     }
     else {
         echo '<script> alert("Mauvais identifiant ou mot de passe !") </script>';
-        echo '<meta http-equiv="refresh" content="0.01; URL=\'../../html/connection.php\'">';
+        echo '<meta http-equiv="refresh" content="0.01; URL=\'../view/connection.php\'">';
     }
 }

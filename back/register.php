@@ -7,11 +7,11 @@ $donnees = $reponse->fetch();
 if($donnees)
 {
     echo '<script> alert("Cette adresse est déjà utilisée") </script>';
-    echo '<meta http-equiv="refresh" content="0.0001; URL=\'../../html/connection.php\'">';
+    echo '<meta http-equiv="refresh" content="0.0001; URL=\'../view/connection.php\'">';
 } 
 else if ($_POST['mdp'] != $_POST['mdp1']){
     echo '<script> alert("mots de passes pas identiques") </script>';
-    echo '<meta http-equiv="refresh" content="0.0001; URL=\'../../html/connection.php\'">';
+    echo '<meta http-equiv="refresh" content="0.0001; URL=\'../view/connection.php\'">';
 } 
 else {
     // Hachage du mot de passe
@@ -26,5 +26,5 @@ else {
         'email' => $_POST['email']));
 
     echo '<script> alert("Félicitation! Votre compte à bien été créé") </script>';
-    echo '<meta http-equiv="refresh" content="0.0001; URL=\'../../html/connection.php\'">';
+    echo '<meta http-equiv="refresh" content="0.0001; URL=\'../view/connection.php\'">';
 }   

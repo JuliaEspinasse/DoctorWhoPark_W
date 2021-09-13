@@ -7,7 +7,7 @@
 
     <!-- l'onglet -->
         <title>DWPark</title>
-        <link rel="icon" href="Images/Logo/LogoXx.png">
+        <link rel="icon" href="images/logo/LogoXx.png">
 
     <!-- aos -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,13 +19,13 @@
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         
     <!-- css -->
-        <link href="FONT/stylesheet.css" rel="stylesheet"/>
-        <link href="CSS/style.css" rel="stylesheet"/>
+        <link href="font/stylesheet.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
     </head>
     <body id="home">
 
     <!------------ Navbar -------------->
-    <?php include "PHP/navbarAccueil.php"; ?>
+    <?php include "view/navbarAccueil.php"; ?>
 
         <div id="up"></div>
 
@@ -69,26 +69,26 @@
             <div data-aos="fade-left" data-aos-duration="1000">
                 <div class="row row-cols-1 row-cols-md-3 g-4 rowOne ">
                     <div class="col">
-                        <a href="HTML/leParc.php">
+                        <a href="view/leParc.php">
                             <div class="card">
                                 <h5 class="card-title">Le Parc</h5>
-                                <img src="Images/pageVisiteur/Parc.jpg" alt="DWP">
+                                <img src="images/pageVisiteur/Parc.jpg" alt="DWP">
                             </div>
                         </a>
                     </div>
                     <div class="col">
-                        <a href="HTML/lesEvenements.php">
+                        <a href="view/lesEvenements.php">
                             <div class="card">
                                 <h5 class="card-title">Evenements</h5>
-                                <img src="Images/pageVisiteur/Evenements.jpg" alt="DWP">
+                                <img src="images/pageVisiteur/Evenements.jpg" alt="DWP">
                             </div>
                         </a>
                     </div>
                     <div class="col">
-                        <a href="HTML/lesReservations.php">
+                        <a href="view/lesReservations.php">
                             <div class="card">
                                 <h5 class="card-title">Reservations</h5>
-                                <img src="Images/pageVisiteur/Tarifs.jpg" alt="DWP">
+                                <img src="images/pageVisiteur/Tarifs.jpg" alt="DWP">
                             </div>
                         </a>
                     </div>
@@ -99,7 +99,7 @@
         <!-- <div id="bas">Bas de page qui reste fixe</div> -->
 
     <!-- sript js -->
-        <script src="JS/main.js"></script>
+        <script src="js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         
 

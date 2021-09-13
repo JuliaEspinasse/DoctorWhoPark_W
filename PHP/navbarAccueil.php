@@ -5,7 +5,7 @@ if(isset($_COOKIE['id']) || isset($_SESSION['id'])){
     <nav class="navbar fixed-top" id="navbarAcceuil">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">
-                <img src="Images/Logo/logo/drwp.png" alt="Logo_DWP" id="logo">
+                <img src="images/logo/logo/drwp.png" alt="logo_DWP" id="logo">
             </a>
             <ul class="nav justify-content-end">
                 <li class="nav-item dropdown">
@@ -16,14 +16,14 @@ if(isset($_COOKIE['id']) || isset($_SESSION['id'])){
                         </div>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="PHP/deco.php">Se deconnecter</a></li>
+                        <li><a class="dropdown-item" href="php/api/deco.php">Se deconnecter</a></li>
                     </ul>
                 </li>
                 <?php
                 if(($_SESSION["role"]) == 'admin'){
                 ?>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../HTML/ADMIN/admin.php">
+                        <a class="nav-link" aria-current="page" href="../html/admin/admin.php">
                             <i class="fas fa-user-shield"></i>
                         </a>
                     </li>
@@ -39,7 +39,7 @@ if(isset($_COOKIE['id']) || isset($_SESSION['id'])){
     <nav class="navbar fixed-top" id="navbarAcceuil">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">
-                <img src="Images/Logo/logo/drwp.png" alt="Logo_DWP" id="logo">
+                <img src="images/logo/logo/drwp.png" alt="Logo_DWP" id="logo">
             </a>
             <ul class="nav justify-content-end">
                 <li class="nav-item dropdown">

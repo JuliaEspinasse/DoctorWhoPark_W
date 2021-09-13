@@ -7,7 +7,7 @@
 
     <!-- l'onglet -->
         <title>DWPark RESERVATION</title>
-        <link rel="icon" href="../Images/Logo/LogoXx.png">
+        <link rel="icon" href="../images/Logo/LogoXx.png">
 
     <!-- aos -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,13 +19,13 @@
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         
     <!-- css -->
-        <link href="../FONT/stylesheet.css" rel="stylesheet"/>
-        <link href="../CSS/style.css" rel="stylesheet"/>
+        <link href="../font/stylesheet.css" rel="stylesheet"/>
+        <link href="../css/style.css" rel="stylesheet"/>
     </head>
     <body>
 
     <!------------ Navbar -------------->
-        <?php include "../PHP/navbar.php"; ?>
+        <?php include "../php/navbar.php"; ?>
         <section>
     <!------------ TEXTE ------------>
             <figure class="text-center texteRight">
@@ -39,7 +39,7 @@
 
     <!------------ Boutton PREVIOUS & NEXT ------------>
             <div class="wrapper" id="arrow">
-                <a class="cta" href="../HTML/leParc.php" id="previousIndex">
+                <a class="cta" href="leParc.php" id="previousIndex">
                     <span>
                         <svg width="66px" height="43px" version="1.1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" class="previousArrow">
@@ -58,7 +58,7 @@
                     </span>
                     <span>Le parc</span>
                 </a>
-                <a class="cta" href="../HTML/lesEvenements.php" id="nextIndex">
+                <a class="cta" href="lesEvenements.php" id="nextIndex">
                     <span>Les Evenements</span>
                     <span>
                         <svg width="66px" height="43px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -113,12 +113,12 @@
             <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <img class="img-fluid d-block mx-auto" src="../Images/lieux/paramount-02.jpg" alt="" />
+                        <img class="img-fluid d-block mx-auto" src="../images/lieux/paramount-02.jpg" alt="" />
                         <p>A LA JOURNEE<ul>
                             <div id="tarifBillet">
                                 <?php 
-                                include "../PHP/BDD/sql.php"; 
-                                include "../PHP/BDD/functionsBdd.php";
+                                include "../php/bdd/sql.php"; 
+                                include "../php/bdd/functionsBdd.php";
                                    foreach(allTarifs($bdd) as $tarif){
                                        if($tarif -> period_id == 16){
                                            echo "<div class='categorie'><div> " . htmlspecialchars($tarif ->categorie) . " </div><div> " . htmlspecialchars($tarif ->montant) . " </div></div>";
@@ -141,7 +141,7 @@
             <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <img class="img-fluid d-block mx-auto" src="../Images/lieux/TardisIn.jpg" alt="" />
+                        <img class="img-fluid d-block mx-auto" src="../images/lieux/TardisIn.jpg" alt="" />
                         <p>A LA NUIT<ul>
                             <div id="tarifSejour">
                             <?php 
@@ -165,7 +165,7 @@
             <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <img class="img-fluid d-block mx-auto" src="../Images/pageReservation/costumes.jpg" alt="" />
+                        <img class="img-fluid d-block mx-auto" src="../images/pageReservation/costumes.jpg" alt="" />
                         <p>A LA JOURNEE<ul>
                             <div id="tarifCostume"></div>
                         </ul></p>
@@ -193,7 +193,7 @@
 
 
     <!-- sript js -->
-        <script src="../JS/main.js"></script>
+        <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 

@@ -7,7 +7,7 @@
 
         <!-- l'onglet -->
         <title>DWPark CONNECTION</title>
-        <link rel="icon" href="../Images/Logo/LogoXx.png">
+        <link rel="icon" href="../images/logo/LogoXx.png">
 
         <!-- aos -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,22 +19,22 @@
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         
         <!-- css -->
-        <link href="../FONT/stylesheet.css" rel="stylesheet"/>
-        <link href="../CSS/style.css" rel="stylesheet"/>
+        <link href="../font/stylesheet.css" rel="stylesheet"/>
+        <link href="../css/style.css" rel="stylesheet"/>
     </head>
     <body>
     <!------------ Navbar -------------->
         <nav class="navbar fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.php">
-                    <img src="../Images/Logo/logo/drwp.png" alt="Logo_DWP" id="logo">
+                    <img src="../images/logo/logo/drwp.png" alt="Logo_DWP" id="logo">
                 </a>
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="../index.php">HOME</a>
                     </li>
                     <?php
-                    include "../PHP/BDD/sql.php";
+                    include "../php/bdd/sql.php";
                     if(isset($_COOKIE['role'== "admin"])){
                     ?>
                     <li class="nav-item">
@@ -89,7 +89,7 @@
                     <a data-bs-toggle="modal" href="#modalSeConnecter">
                         <div class="card">
                             <h5 class="card-title">Se Connecter</h5>
-                            <img src="../Images/pageConnection/Connection.jpg" alt="DWP">
+                            <img src="../images/pageConnection/Connection.jpg" alt="DWP">
                         </div>
                     </a>
                 </div>
@@ -97,7 +97,7 @@
                     <a data-bs-toggle="modal" href="#modalSInscrire">
                         <div class="card">
                             <h5 class="card-title">S'Inscrire</h5>
-                            <img src="../Images/pageConnection/Inscription.jpg" alt="DWP">
+                            <img src="../images/pageConnection/Inscription.jpg" alt="DWP">
                         </div>
                     </a>
                 </div>
@@ -105,7 +105,7 @@
                     <a data-bs-toggle="modal" href="#modalContact">
                         <div class="card">
                             <h5 class="card-title">Nous Contacter</h5>
-                            <img src="../Images/pageConnection/Contact.jpg" alt="DWP">
+                            <img src="../images/pageConnection/Contact.jpg" alt="DWP">
                         </div>
                     </a>
                 </div>
@@ -118,7 +118,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <fieldset><h4>Connection</h4> 
-                            <form method="post" action="../PHP/connect.php">
+                            <form method="post" action="../php/api/connect.php">
                                 <div>
                                     <label for="email">Votre email</label>
                                     <input type="text" id="email" name="email" placeholder="email@galifrey.gxy" required>
@@ -142,7 +142,7 @@
                     <div class="modal-body">
                         <div class="corp">
                             <fieldset><h4>Inscription</h4>
-                                <form method="post" action="../PHP/register.php">
+                                <form method="post" action="../php/api/register.php">
                                     <div>
                                         <label for="name">Nom</label>
                                         <input type="text" id="name" name="name" placeholder="" required>
@@ -197,7 +197,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <fieldset><h4>Contact</h4> 
-                            <form method="post" action="../PHP/contact.php">
+                            <form method="post" action="../php/contact.php">
                                 <div>
                                     <label for="contact_name">Nom :</label>
                                     <input type="text" id="contact_name" name="user_name">
@@ -225,7 +225,7 @@
         </div>
 
         <!-- sript js -->
-        <script src="../JS/main.js"></script>
+        <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 

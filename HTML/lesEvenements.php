@@ -7,7 +7,7 @@
 
     <!-- l'onglet -->
         <title>DWPark EVENEMENTS</title>
-        <link rel="icon" href="../Images/Logo/LogoXx.png">
+        <link rel="icon" href="../images/logo/LogoXx.png">
 
     <!-- aos -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,13 +19,13 @@
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         
     <!-- css -->
-        <link href="../FONT/stylesheet.css" rel="stylesheet"/>
-        <link href="../CSS/style.css" rel="stylesheet"/>
+        <link href="../font/stylesheet.css" rel="stylesheet"/>
+        <link href="../css/style.css" rel="stylesheet"/>
     </head>
     <body>
 
     <!------------ Navbar -------------->
-        <?php include "../PHP/navbar.php"; ?>
+        <?php include "../php/navbar.php"; ?>
 
     <section>
     <!------------ TEXTE ------------>
@@ -40,7 +40,7 @@
 
     <!------------ Boutton PREVIOUS & NEXT ------------>
         <div class="wrapper" id="arrow">
-            <a class="cta" href="../HTML/leParc.php">
+            <a class="cta" href="leParc.php">
                 <span>
                     <svg width="66px" height="43px" version="1.1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" class="previousArrow">
@@ -59,7 +59,7 @@
                 </span>
                 <span>Le parc</span>
             </a>
-            <a class="cta" href="../HTML/lesReservations.php">
+            <a class="cta" href="lesReservations.php">
                 <span>Reservations</span>
                 <span>
                     <svg width="66px" height="43px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@
                 <a href="#">
                     <div class="card">
                         <h5 class="card-title">Passes</h5>
-                        <img src="../Images/pageEvenement/Passe.jpg" alt="DWP">
+                        <img src="../images/pageEvenement/Passe.jpg" alt="DWP">
                     </div>
                 </a>
             </div>
@@ -94,7 +94,7 @@
                 <a href="#">
                     <div class="card">
                         <h5 class="card-title">Futurs</h5>
-                        <img src="../Images/pageEvenement/Futur.jpg" alt="DWP">
+                        <img src="../images/pageEvenement/Futur.jpg" alt="DWP">
                     </div>
                 </a>
             </div>
@@ -102,7 +102,7 @@
                 <a href="#">
                     <div class="card">
                         <h5 class="card-title">Calendrier</h5>
-                        <img src="../Images/pageEvenement/Calendrier.jpg" alt="DWP">
+                        <img src="../images/pageEvenement/Calendrier.jpg" alt="DWP">
                     </div>
                 </a>
             </div>
@@ -110,7 +110,7 @@
     </section>
 
     <!-- sript js -->
-        <script src="../JS/main.js"></script>
+        <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 

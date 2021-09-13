@@ -7,7 +7,7 @@
 
         <!-- l'onglet -->
         <title>DWPark Le Parc</title>
-        <link rel="icon" href="../Images/Logo/LogoXx.png">
+        <link rel="icon" href="../images/Logo/LogoXx.png">
 
         <!-- aos -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,13 +19,13 @@
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         
         <!-- css -->
-        <link href="../FONT/stylesheet.css" rel="stylesheet"/>
-        <link href="../CSS/style.css" rel="stylesheet"/>
+        <link href="../font/stylesheet.css" rel="stylesheet"/>
+        <link href="../css/style.css" rel="stylesheet"/>
     </head>
     <body>
 
     <!------------ Navbar -------------->
-        <?php include "../PHP/navbar.php"; ?>
+        <?php include "../php/navbar.php"; ?>
 
     <section>
         <!------------ TEXTE ------------>
@@ -86,7 +86,7 @@
                 <a href="#">
                     <div class="card">
                         <h5 class="card-title">Les Attractions</h5>
-                        <img src="../Images/pageParc/attractions.jpg" alt="DWP">
+                        <img src="../images/pageParc/attractions.jpg" alt="DWP">
                     </div>
                 </a>
             </div>
@@ -94,7 +94,7 @@
                 <a href="#">
                     <div class="card">
                         <h5 class="card-title">La Carte</h5>
-                        <img src="../Images/pageParc/leplan.jpg" alt="DWP">
+                        <img src="../images/pageParc/leplan.jpg" alt="DWP">
                     </div>
                 </a>
             </div>
@@ -102,7 +102,7 @@
                 <a href="#">
                     <div class="card">
                         <h5 class="card-title">Les Avis</h5>
-                        <img src="../Images/pageParc/avis.jpg" alt="DWP">
+                        <img src="../images/pageParc/avis.jpg" alt="DWP">
                     </div>
                 </a>
             </div>
@@ -110,7 +110,7 @@
     </section>
 
         <!-- sript js -->
-        <script src="./JS/main.js"></script>
+        <script src="./js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 

@@ -7,7 +7,7 @@
 
         <!-- l'onglet -->
         <title>DWPark ADMIN</title>
-        <link rel="icon" href="../../Images/Logo/LogoXx.png">
+        <link rel="icon" href="../../images/logo/LogoXx.png">
 
         <!-- aos -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,8 +19,8 @@
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         
         <!-- css -->
-        <link href="../../FONT/stylesheet.css" rel="stylesheet"/>
-        <link href="../../CSS/style.css" rel="stylesheet"/>
+        <link href="../../font/stylesheet.css" rel="stylesheet"/>
+        <link href="../../css/style.css" rel="stylesheet"/>
     </head>
     <body id="bodyAdmin" onload="getUsers();">
         
@@ -29,11 +29,12 @@
         <nav class="navbar fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../../index.php">
-                    <img src="../../Images/Logo/logo/drwp.png" alt="Logo_DWP" id="logo">
+                    <img src="../../images/logo/logo/drwp.png" alt="logoDWP" id="logo">
                 </a>
                 <ul class="nav">
                     <a class="btn btn-admin" href="#up"> Ajouter </a>
                     <a class="btn btn-admin" href="#listUsers"> Abonnés </a>
+                    <a class="btn btn-admin" href="#listTarifs"> Tarifs </a>
                     <a class="btn btn-admin" href="#listResaBillets"> Résérvation Billet </a>
                     <a class="btn btn-admin" href="#listResaCostumes"> Résérvation Costume </a>
                     <a class="btn btn-admin" href="#listEvents"> Evenements </a>
@@ -134,7 +135,7 @@
 
     <!------------ Tableau ------------>
         <!----- ABONNES ----->
-        <div id="listUsers"></div>
+        <div id="listUsers">
         <section class="tableau row-one tfirst" >  
             <table >
                 <thead>
@@ -147,11 +148,70 @@
                         <td>Date de naissance</td>
                         <td>Code Postale</td>
                         <td>Ville</td>
+                        <td>Date d'inscription</td>
+                        <td>role</td>
+                        <td>edition</td>
                     </tr>
                 </thead>    
-                <tbody id="users"></tbody>  
+                <tbody id="users">
+                    <?php 
+                    include "../../php/bdd/sql.php"; 
+                    include "../../php/bdd/functionsBdd.php";
+                        foreach(allUsers($bdd) as $user){
+                        echo "<tr id=".htmlspecialchars($user ->email)." class='user'>
+                                <td>".htmlspecialchars($user ->id)."</td>
+                                <td> ". htmlspecialchars($user ->name)."</td>
+                                <td> ". htmlspecialchars($user ->firstname)."</td>
+                                <td> ". htmlspecialchars($user ->email)."</td>
+                                <td> ". htmlspecialchars($user ->phone)."</td>
+                                <td> ". htmlspecialchars($user ->birthday)."</td>
+                                <td> ". htmlspecialchars($user ->postcode)."</td>
+                                <td> ". htmlspecialchars($user ->city)."</td>
+                                <td> ". htmlspecialchars($user ->date_inscription)."</td>
+                                <td> ". htmlspecialchars($user ->role)."</td>
+                                <td id=".htmlspecialchars($user ->email).">
+                                    <a href=''><i class='fas fa-user-edit'></i></a>
+                                    <a href=''><i class='fas fa-skull-crossbones'></i></a>
+                                </td>
+                            </tr>";
+                        }           
+                    ?>
+                </tbody>  
             </table>
         </section> 
+        </div>
+
+        <!----- Tarif ----->
+        <div id="listTarifs">
+        <section class="tableau row-one tfirst" >  
+            <table >
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Montant</td>
+                        <td>Promo</td>
+                        <td>Id Period</td>
+                        <td>Categorie</td>
+                        <td>edition</td>
+                    </tr>
+                </thead>    
+                <tbody id="tarif">
+                    <?php 
+                        foreach(allTarifs($bdd) as $tarif){
+                            echo "<tr>
+                            <td>".htmlspecialchars($tarif ->id)."</td>
+                            <td> ". htmlspecialchars($tarif ->montant)."</td>
+                            <td> ". htmlspecialchars($tarif ->promo)."</td>
+                            <td> ". htmlspecialchars($tarif ->period_id)."</td>
+                            <td> ". htmlspecialchars($tarif ->categorie)."</td>
+                            <td><a href=''><i class='fas fa-edit'></i></a><a href=''><i class='fas fa-trash-alt'></i></a></td>
+                            </tr>";
+                        }           
+                    ?>
+                </tbody>  
+            </table>
+        </section> 
+        </div>
             
         <!---- RESERVATION ---->
         <!------ Billet ------>
@@ -230,7 +290,8 @@
 
 
         <!-- sript js -->
-        <script src="../../JS/main.js"></script>
+        <script src ="../../js/ajax.js"></script>
+        <script src="../../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 

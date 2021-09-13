@@ -33,11 +33,17 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="../index.php">HOME</a>
                     </li>
+                    <?php
+                    include "../PHP/BDD/sql.php";
+                    if(isset($_COOKIE['role'== "admin"])){
+                    ?>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="../HTML/ADMIN/admin.php">
-                            <img src="../Images/visibility_off_white_24dp.svg" alt="DWP">
+                            <i class="fas fa-user-shield"></i>
                         </a>
                     </li>
+                    <?php
+                    } ?>
                 </ul>
             </div>
         </nav>
@@ -112,14 +118,14 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <fieldset><h4>Connection</h4> 
-                            <form method="get" action="../PHP/connect.php">
+                            <form method="post" action="../PHP/connect.php">
                                 <div>
-                                    <label for="mail">Votre email</label>
-                                    <input type="text" id="mail" name="mail" placeholder="email@galifrey.gxy" required>
+                                    <label for="email">Votre email</label>
+                                    <input type="text" id="email" name="email" placeholder="email@galifrey.gxy" required>
                                 </div>
                                 <div>
                                     <label for="mdp">Mot de passe</label>
-                                    <input type="password" id="mdpUser" placeholder="************" required>
+                                    <input type="password" id="mdp" name="mdp" placeholder="************" required>
                                 </div>
                                 <button type="submit" class="btn" formmethod="post"> Connection </button>
                             </form>

@@ -1,7 +1,17 @@
 <?php
     include "../bdd/sql.php"; 
     include "../bdd/functionsBdd.php";
-    
+    if(isset($_GET['id'])){
+            $sql = "SELECT role FROM user WHERE id=".$_GET['id']."";
+            $req =  $bdd->prepare($sql);
+            $result = $req->execute([
+                ":id" => $_GET['id']
+            ]);
+            return $result;
+            echo $result;
+        
+        echo "<script> console.log('toto') </script>";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,7 +37,7 @@
         <link href="../font/stylesheet.css" rel="stylesheet"/>
         <link href="../css/style.css" rel="stylesheet"/>
     </head>
-    <body id="bodyAdmin" onload="getUsers();">
+    <body id="bodyAdmin">
         
     <!------------ Navbar -------------->
         <nav class="navbar fixed-top">
@@ -168,15 +178,16 @@
                                 <td> '. htmlspecialchars($user ->city).'</td>
                                 <td> '. htmlspecialchars($user ->date_inscription).'</td>
                                 <td>
-                                    <select name="" id="value-'. $user->id . '">
+                                    <select name="'. $user->id . '" id="'. $user->id . '">
                                         <option value="admin"' ?>
                                             <?php if(($user -> role) == "admin") echo "selected" ?><?= '>admin</option>
                                         <option  value="user"' ?>
-                                            <?php if(($user -> role) == "user") echo "selected" ?><?= ' >user</option>
+                                            <?php if(($user -> role) == "user") echo "selected" ?><?= '>user</option>
                                     </select>
-                                    </td>
+                                </td>
                                 <td>
-                                    <a href="'. $user->id . '" id=lien-"' . $user->id . '" class="ajaxRole"><i class="fas fa-user-edit"></i></a>
+                                    <a href="admin.php?id='. $user->id . '&role='. $user->role .'" id=lien-"' . $user->id . '" class="ajaxRole"><i class="fas fa-user-edit"></i></a>
+                                    
                                     <a href="../back/delUser.php?user=' . $user->id . '" 
                                         onclick="return confirm(\'Voulez-vous vraiment supprimer cet utilisateur ?\');">
                                             <i class="fas fa-skull-crossbones"></i></a>
@@ -298,8 +309,8 @@
 
 
         <!-- sript js -->
-        <script src ="../js/ajax.js"></script>
-        <script src="../js/main.js"></script>
+        <!-- <script src ="../js/ajax.js"></script> -->
+        <!-- <script src="../js/main.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 

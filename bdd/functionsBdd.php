@@ -104,3 +104,14 @@ function addUser($name, $firstname,$mdp, $email, $bdd){
     ]);
     return $result;
 }
+
+// Modifier
+function modifUser($id, $role, $bdd){
+    $sql = "UPDATE user SET role=:role WHERE id=:id";
+    $req =  $bdd->prepare($sql);
+    $result = $req->execute([
+        ":role" => $role,
+        ":id" => $id
+    ]);
+    return $result;
+}

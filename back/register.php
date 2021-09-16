@@ -10,7 +10,7 @@ if($donnees)
     echo '<meta http-equiv="refresh" content="0.0001; URL=\'../view/connection.php\'">';
 } 
 else if ($_POST['mdp'] != $_POST['mdp1']){
-    echo '<script> alert("mots de passes pas identiques") </script>';
+    echo '<script> alert("Les mots de passes ne sont pas identiques") </script>';
     echo '<meta http-equiv="refresh" content="0.0001; URL=\'../view/connection.php\'">';
 } 
 else {

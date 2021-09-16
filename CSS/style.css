@@ -271,6 +271,35 @@ ul.dropdown-menu.show {
             transform: translateX(0%);
   }
 }
+
+@media(max-width: 767px) {
+  body{
+    overflow-x: scroll ;
+    overflow-y: scroll;
+  }
+
+  nav #logo {
+    width: 32vh;
+  }
+
+  #rowConnect {
+    padding-top: 0;
+  }
+
+  .modal-content{
+    margin-left: 0 !important;
+    width: 55vh !important;
+  }
+
+  form, .btn
+  {
+    margin-left: 0 !important;
+  }
+
+  input {
+    width: 50vh !important;
+  }
+}
 /* ---------------------------------------------------------------------------------------- */
 /*                                        MODAL                                             */
 /* ---------------------------------------------------------------------------------------- */

@@ -48,9 +48,9 @@ if(isset($_COOKIE['id']) || isset($_SESSION['id'])){
                         <div class="welcome">Bienvenue</div>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../view/connection.php">Creer mon compte</a></li>
-                        <li><a class="dropdown-item" href="../view/connection.php">Se connecter</a></li>
-                        <li><a class="dropdown-item" href="../view/connection.php">nous contacter</a></li>
+                        <li><a class="dropdown-item" href="view/connection.php">Creer mon compte</a></li>
+                        <li><a class="dropdown-item" href="view/connection.php">Se connecter</a></li>
+                        <li><a class="dropdown-item" href="view/connection.php">nous contacter</a></li>
                 </li>
             </ul>
         </div>

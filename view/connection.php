@@ -163,22 +163,6 @@
                                         <label for="mdp">Mot de passe</label>
                                         <input type="password" id="mdp1" name="mdp1" placeholder="Warning !! The same ..." required>
                                     </div>
-                                    <!-- <div>
-                                        <label for="phone">Téléphone</label>
-                                        <input type="tel" id="phone" name="phone" required>
-                                    </div>
-                                    <div>
-                                        <label for="birthday">Date de naissance</label>
-                                        <input type="date" id="birthday" name="birthday" value="aaaa-mm-jj" min="1900-01-01" max="2202-02-02" required>
-                                    </div>
-                                    <div>
-                                        <label for="codePostal">Code Postale</label>
-                                        <input type="codePostal" id="codePostal" name="codePostal" placeholder="" required>
-                                    </div>
-                                    <div>
-                                        <label for="ville">Ville</label>
-                                        <input type="ville" id="ville" name="ville" placeholder="" required>
-                                    </div> -->
                                     <div class="button">    
                                         <input class="btn" type="submit" value="Geronimo !">
                                         <input class="btn" type="reset" value="Exterminate">

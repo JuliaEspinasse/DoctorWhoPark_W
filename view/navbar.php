@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_COOKIE['id']) || isset($_SESSION['id'])){
+if(isset($_COOKIE['id_User']) || isset($_SESSION['id_User'])){
     ?>    
     <nav class="navbar fixed-top" id="navbarAcceuil">
         <div class="container-fluid">
@@ -16,11 +16,11 @@ if(isset($_COOKIE['id']) || isset($_SESSION['id'])){
                         </div>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../back/deco.php">Se deconnecter</a></li>
+                        <li><a class="dropdown-item" href="../back/deco.php"> Se deconnecter </a></li>
                     </ul>
                 </li>
                 <?php
-                if(($_SESSION["role"]) == 'admin'){
+                if(($_SESSION["id_role"]) == '1'){
                 ?>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="admin.php">

@@ -25,7 +25,10 @@
     <body>
 
     <!------------ Navbar -------------->
+    <header>
         <?php include "navbar.php"; ?>
+    </header>
+        
 
     <section>
     <!------------ TEXTE ------------>

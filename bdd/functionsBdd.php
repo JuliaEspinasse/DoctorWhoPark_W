@@ -72,11 +72,11 @@ function deleteAttraction($attraction,$bdd){
     return $result;
 }
 
-function deleteUser($id,$bdd){
-    $sql = "DELETE FROM user WHERE id = :id";
+function deleteUser($id_User ,$bdd){
+    $sql = "DELETE FROM user WHERE id_User  = :id_User ";
     $req =  $bdd->prepare($sql);
     $result = $req->execute([
-        "id"=>$id
+        "id_User "=>$id_User 
     ]);
     return $result;
 }
@@ -93,25 +93,13 @@ function addAttraction($attractionNom,$attractionDesc,$attractionImg,$bdd){
     return $result;
 }
 
-function addUser($name, $firstname,$mdp, $email, $bdd){
-    $sql = "insert into user (name, firstname, mdp, email) VALUES (:name, :firstname, :mdp, :email)";
-    $req =  $bdd->prepare($sql);
-    $result = $req->execute([
-        ":name" => $name,
-        ":firstname" => $firstname,
-        ":mdp" => $mdp,
-        "email" => $email
-    ]);
-    return $result;
-}
-
 // Modifier
-function modifUser($id, $role, $bdd){
-    $sql = "UPDATE user SET role=:role WHERE id=:id";
+function modifUser($id_User , $id_role, $bdd){
+    $sql = "UPDATE user SET id_role=:id_role WHERE id_User=:id_User";
     $req =  $bdd->prepare($sql);
     $result = $req->execute([
-        ":role" => $role,
-        ":id" => $id
+        ":id_role" => $id_role,
+        ":id_User" => $id_User
     ]);
     return $result;
 }

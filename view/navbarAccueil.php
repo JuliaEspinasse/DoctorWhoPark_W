@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_COOKIE['id']) || isset($_SESSION['id'])){
+if(isset($_COOKIE['id_User']) || isset($_SESSION['id_User'])){
     ?>    
     <nav class="navbar fixed-top" id="navbarAcceuil">
         <div class="container-fluid">
@@ -20,7 +20,7 @@ if(isset($_COOKIE['id']) || isset($_SESSION['id'])){
                     </ul>
                 </li>
                 <?php
-                if(($_SESSION["role"]) == 'admin'){
+                if(($_SESSION["id_role"]) == '1'){
                 ?>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="view/admin.php">

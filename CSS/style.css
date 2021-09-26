@@ -1,6 +1,6 @@
 body {
   background-color: #1c2436;
-  background-image: url("../Images/pageVisiteur/background.jpg");
+  background-image: url("../images/pageVisiteur/background.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -274,8 +274,7 @@ ul.dropdown-menu.show {
 
 @media(max-width: 767px) {
   body{
-    overflow-x: scroll ;
-    overflow-y: scroll;
+    overflow-y: scroll ;
   }
 
   nav #logo {
@@ -300,6 +299,7 @@ ul.dropdown-menu.show {
     width: 50vh !important;
   }
 }
+
 /* ---------------------------------------------------------------------------------------- */
 /*                                        MODAL                                             */
 /* ---------------------------------------------------------------------------------------- */

@@ -55,57 +55,33 @@
                     <p> Geronimo! </p>
                 </blockquote>
                 <figcaption class="blockquote-footer">
-                    <cite title="Source Title">Doctor Who,</cite> le onziéme docteur.
+                    <cite title="Source Title"><h1>Doctor Who</h1>,  </cite> le onziéme docteur.
                 </figcaption>
             </figure>
-
-    <!---- message info connection ---->
-            <!-- <div id="messageInfo">
-            <?php
-            // if (!empty($_GET['error'])) {
-            //     $error = explode("-", $_GET['error']);
-            // }
-            //     echo "<p>";
-            //     foreach ($error as $error) {
-            //         if ($error == "format") {
-            //             echo " La photo doit être au format jpg ou png. </br> ";
-            //         } else if ($error == "size") {
-            //             echo " Le fichier ne doit pas dépasser les 3 Mo. </br> ";
-            //         }
-            //         else if ($error == "exist") {
-            //             echo " L'animal que vous avez rentré existe déjà.";
-            //         }
-            //         else if ($error == "specialC") {
-            //             echo " Caractères spéciaux interdit sur le nom de l'animal.";
-            //         }
-            //     }
-            //     echo "</p>";
-            ?>
-            </div> -->
 
     <!------------ Card ------------>
             <div class="row row-cols-1 row-cols-md-3 g-4" id="rowConnect">
                 <div class="col">
                     <a data-bs-toggle="modal" href="#modalSeConnecter">
                         <div class="card">
-                            <h5 class="card-title">Se Connecter</h5>
-                            <img src="../images/pageConnection/Connection.jpg" alt="DWP">
+                            <h2 class="card-title">Se Connecter</h2>
+                            <img src="../images/pageConnection/Connection.jpg" alt="page_connection">
                         </div>
                     </a>
                 </div>
                 <div class="col">
                     <a data-bs-toggle="modal" href="#modalSInscrire">
                         <div class="card">
-                            <h5 class="card-title">S'Inscrire</h5>
-                            <img src="../images/pageConnection/Inscription.jpg" alt="DWP">
+                            <h2 class="card-title">S'Inscrire</h2>
+                            <img src="../images/pageConnection/Inscription.jpg" alt="page_inscription">
                         </div>
                     </a>
                 </div>
                 <div class="col">
                     <a data-bs-toggle="modal" href="#modalContact">
                         <div class="card">
-                            <h5 class="card-title">Nous Contacter</h5>
-                            <img src="../images/pageConnection/Contact.jpg" alt="DWP">
+                            <h2 class="card-title">Nous Contacter</h2>
+                            <img src="../images/pageConnection/Contact.jpg" alt="page_contact">
                         </div>
                     </a>
                 </div>

@@ -168,7 +168,7 @@
                     <?php 
                         foreach(allUsers($bdd) as $user){
                         echo '<tr class="user">
-                                <td> '. htmlspecialchars($user ->id).'</td>
+                                <td> '. htmlspecialchars($user ->id_User).'</td>
                                 <td> '. htmlspecialchars($user ->name).'</td>
                                 <td> '. htmlspecialchars($user ->firstname).'</td>
                                 <td> '. htmlspecialchars($user ->email).'</td>
@@ -178,17 +178,17 @@
                                 <td> '. htmlspecialchars($user ->city).'</td>
                                 <td> '. htmlspecialchars($user ->date_inscription).'</td>
                                 <td>
-                                    <select name="'. $user->id . '" id="'. $user->id . '">
-                                        <option value="admin"' ?>
-                                            <?php if(($user -> role) == "admin") echo "selected" ?><?= '>admin</option>
-                                        <option  value="user"' ?>
-                                            <?php if(($user -> role) == "user") echo "selected" ?><?= '>user</option>
+                                    <select name="'. $user->id_User . '" id="'. $user->id_User . '">
+                                        <option value="1"' ?>
+                                            <?php if(($user -> id_role) == "1") echo "selected" ?><?= '>admin</option>
+                                        <option  value="2"' ?>
+                                            <?php if(($user -> id_role) == "2") echo "selected" ?><?= '>user</option>
                                     </select>
                                 </td>
                                 <td>
-                                    <a href="admin.php?id='. $user->id . '&role='. $user->role .'" id=lien-"' . $user->id . '" class="ajaxRole"><i class="fas fa-user-edit"></i></a>
+                                    <a href="admin.php?id='. $user->id_User . '&role='. $user->id_role .'" id=lien-"' . $user->id_User . '" class="ajaxRole"><i class="fas fa-user-edit"></i></a>
                                     
-                                    <a href="../back/delUser.php?user=' . $user->id . '" 
+                                    <a href="../back/delUser.php?user=' . $user->id_User . '" 
                                         onclick="return confirm(\'Voulez-vous vraiment supprimer cet utilisateur ?\');">
                                             <i class="fas fa-skull-crossbones"></i></a>
                                 </td>
